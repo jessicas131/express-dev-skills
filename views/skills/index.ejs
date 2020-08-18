@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Welcome to our GA Cohort</h1>
+  <h3>Below are some of our members</h3>
+    <ul>
+      <% cohort.forEach(function(obj){ %>
+        <li>
+       <%= obj.student %>
+      </li>
+      <% }) %>
+    </ul>
+</body>
+</html>
