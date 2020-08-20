@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h1>Welcome to our GA Cohort</h1>
-  <h3>Below are some of our members</h3>
+  <a href="/">Home</a>
+    <h1>Welcome to the Skilleage</h1>
+    <h3>Below are the most important things you will ever know</h3>
     <ul>
-      <% cohort.forEach(function(obj){ %>
+        <% skills.forEach(function(s) { %>
         <li>
-       <%= obj.student %>
-      </li>
-      <% }) %>
+            <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+            -
+            <%= s.learned ? 'learned' : 'not learned' %>
+        </li>
+        <% }); %>
     </ul>
+    <a href="/skills/new">Add Skill</a>
 </body>
 </html>

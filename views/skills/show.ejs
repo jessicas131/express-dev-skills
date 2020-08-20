@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-  <h1>Welcome to our GA Cohort</h1>
-  <h3>Below are our <%= expert %></h3>
-  <li>
-    <%= expertise %>
-</li>
+    <a href="/">Home</a> <a href="/skills">Skillset</a>
+
+    <form action="/skills/<%= skill.id %>?_method=DELETE"
+      method="POST" class="delete-form"  
+    >
+      <button type="submit">X</button>
+    </form>
+    <h1>Skill <%= skillNum %></h1>
 </body>
 </html>
